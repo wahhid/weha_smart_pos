@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>641</width>
+    <height>537</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="MainFrame">
+     <property name="styleSheet">
+      <string notr="true">QFrame#MainFrame{
+	background-color: rgb(255,255,255);	
+	border-radius: 5px;
+	border-color: rgb(107, 108, 108);
+	border-width: 2px;
+     border-style: solid;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="exitPushButton">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+    color: #ffffff;
+    background-color: #ffc107;
+    border-width: 1px;
+	color: rgb(96, 97, 97);
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+QPushButton:pressed{
+    color: rgb(55, 219, 27);
+	background-color: #ffffff;
+    border-width: 1px;
+    border-color: rgb(55, 219, 27);
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+QPushButton:disabled{
+    color: rgb(82, 96, 117);
+    background-color: rgb(0, 0, 0);
+    border-width: 1px;
+    border-color: rgb(82, 96, 117);
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}</string>
+          </property>
+          <property name="text">
+           <string>X</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="PromotionScrollArea">
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOn</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>590</width>
+           <height>387</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QVBoxLayout" name="PromotionVerticalLayout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="_2">
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ExitPushButton">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+    color: #ffffff;
+    background-color: #ffc107;
+    border-width: 1px;
+	color: rgb(96, 97, 97);
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+QPushButton:pressed{
+    color: rgb(55, 219, 27);
+	background-color: #ffffff;
+    border-width: 1px;
+    border-color: rgb(55, 219, 27);
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+QPushButton:disabled{
+    color: rgb(82, 96, 117);
+    background-color: rgb(0, 0, 0);
+    border-width: 1px;
+    border-color: rgb(82, 96, 117);
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}</string>
+          </property>
+          <property name="text">
+           <string>Exit</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

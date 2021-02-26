@@ -1,0 +1,19 @@
+[
+    {
+        'id': 31, 
+        'display_name': '[FURN_6666] Acoustic Bloc Screens', 
+        'lst_price': 2950.0, 
+        'standard_price': 2870.0, 
+        'categ_id': [8, 'All / Saleable / Office Furniture'], 
+        'pos_categ_id': [1, 'Miscellaneous'], 
+        'taxes_id': [], 
+        'barcode': '1231231231', 
+        'default_code': 'FURN_6666', 
+        'to_weight': False, 
+        'uom_id': [1, 'Units'], 
+        'description_sale': False, 
+        'description': False, 
+        'product_tmpl_id': [23, '[FURN_6666] Acoustic Bloc Screens'], 
+        'tracking': 'none'
+    }
+]

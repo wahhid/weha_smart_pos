@@ -1,0 +1,15 @@
+import sqlalchemy as db
+
+engine = db.create_engine('sqlite:///../pos.sqlite')
+connection = engine.connect()
+metadata = db.MetaData()
+product_product = db.Table('product_product', metadata, autoload=True, autoload_with=engine)
+#print(product_product.columns.keys())
+#query = db.select([product_product])
+#ResultProxy = connection.execute(query)
+#ResultSet = ResultProxy.fetchall()
+#print(ResultSet[1])
+query = db.select([product_product]).where(product_product.columns.id == 49)
+ResultProxy = connection.execute(query)
+ResultSet = ResultProxy.fetchall()
+print(ResultSet)

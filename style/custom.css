@@ -1,0 +1,26 @@
+.big_button {{
+    height: 64px;
+    margin-bottom: 15px;
+}}
+
+.pos_order_payment_button {{
+    height: 80px;
+}}
+
+.numpad_button {{
+    height: 50px;
+    width: 50px;
+    font-size: 8px;
+}}
+
+.message_border {{
+    color: {QTMATERIAL_PRIMARYCOLOR};
+    border-style: solid;
+    border-color: {QTMATERIAL_PRIMARYLIGHTCOLOR};
+    border-radius: 3px;
+    border-width: 2px;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}}

@@ -1,0 +1,138 @@
+QWidget
+{
+    background-color: #ffffff;
+}
+
+QPushButton
+{
+    color: #ffaa00;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #ffaa00;
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton#LoginButton
+{
+    color: #ffffff;
+    background-color: #ffaa00;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton#LoginButton:pressed
+{
+    color: #000000;
+    background-color: #ffaa00;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+QPushButton#CheckoutButton
+{
+    color: #ffffff;
+    background-color: #ffaa00;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton#CheckoutButton:pressed
+{
+    color: #000000;
+    background-color: #ffaa00;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+QPushButton#CheckoutButton:disabled
+{
+    color: #C0C0C0;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #C0C0C0;
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
+
+QPushButton:disabled {
+    color: #C0C0C0;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #C0C0C0;
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QLineEdit {
+    color: #000000;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #C0C0C0;
+    border-style: solid;
+    border-radius: 3;
+    selection-color: #000000;
+    selection-background-color: #ffffff;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QLineEdit:!selected{
+    color: #C0C0C0;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #C0C0C0;
+    border-style: solid;
+    border-radius: 3;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+
+QLabel {
+    color: #000000;
+}
+
+QFrame#ProductFrame:selected {
+    background-color: #ffaa00;
+}
+
+QFrame#TotalQFrame {
+    background-color: #f0f0f5; 
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 3;
+}
+
+QLabel#TotalLabel {
+    background-color: #f0f0f5;
+}
+
+QLabel#TotalLabel_2 {
+    background-color: #f0f0f5;
+}

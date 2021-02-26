@@ -1,0 +1,14 @@
+p = 1024x800 
+q = 400x300
+r = 800x480
+
+
+0001 = Order
+0002 = Login
+0003 = Command
+0004 = Product
+0005 = Customer
+0006 = Promo
+0007 = Hold
+0008 = Payment
+0009 = Order Line
