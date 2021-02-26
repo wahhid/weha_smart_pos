@@ -31,7 +31,7 @@ class PosOrderLine(DBHelper):
         payload=json.dumps(line)
         print("CREATE ORDER LINE")
         print(payload)
-        response = requests.post('http://localhost:5000/api/v1/pos_order_line', headers=headers, data=payload)
+        response = requests.post('http://server001.weha-id.com:5000/api/v1/pos_order_line', headers=headers, data=payload)
         if response.status_code != 201:
             return ReturnHandling(True, "Error Create" , response.json())
         response_json  = response.json()
@@ -55,7 +55,7 @@ class PosOrderLine(DBHelper):
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + self.controller.access_token
         }
-        response = requests.delete('http://localhost:5000/api/v1/pos_order_line/' + str(pos_order_line_id), headers=headers)
+        response = requests.delete('http://server001.weha-id.com:5000/api/v1/pos_order_line/' + str(pos_order_line_id), headers=headers)
         if response.status_code != 200:
             return ReturnHandling(True, "Error Delete" , response.json())
         response_json  = response.json()
@@ -76,7 +76,7 @@ class PosOrderLine(DBHelper):
         }
         
         query = "?q=(filters:!((col:order_id,opr:eq,value:" + str(pos_order_id) + ")))"
-        response = requests.get('http://localhost:5000/api/v1/pos_order_line/' + query, headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_order_line/' + query, headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Query" , False)   
@@ -92,7 +92,7 @@ class PosOrderLine(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
         query = "?q=(filters:!((col:order_id,opr:eq,value:" + str(pos_order_id) + ")))"
-        response = requests.get('http://localhost:5000/api/v1/pos_order_line/' + query, headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_order_line/' + query, headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Query" , False)   

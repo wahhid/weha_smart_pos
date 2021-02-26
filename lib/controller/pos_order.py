@@ -51,7 +51,7 @@ class PosOrder(DBHelper):
             }
             
             query = "?q=(filters:!((col:pos_session_id,opr:eq,value:" + str(session_id) + "),(col:state,opr:eq,value:unpaid)))"
-            response = requests.get('http://localhost:5000/api/v1/pos_order/{}'.format(query), headers=headers)
+            response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_order/{}'.format(query), headers=headers)
             if response.status_code != 200:
                 return ReturnHandling(True, "Pos Order not Found" , response.status_code)
             response_json  = response.json()
@@ -62,7 +62,7 @@ class PosOrder(DBHelper):
                     'pos_session': session_id
                 })
                 print(payload)
-                response = requests.post('http://localhost:5000/api/v1/pos_order', headers=headers, data=payload)
+                response = requests.post('http://server001.weha-id.com:5000/api/v1/pos_order', headers=headers, data=payload)
                 if response.status_code != 201:
                     print("Find Pos Order : Error Create")
                     return ReturnHandling(True, "Error Create" , response.json())
@@ -88,7 +88,7 @@ class PosOrder(DBHelper):
             'pos_session_id': 1
         })
 
-        response = requests.post('http://localhost:5000/api/v1/pos_order', headers=headers, data=payload)
+        response = requests.post('http://server001.weha-id.com:5000/api/v1/pos_order', headers=headers, data=payload)
         if response.status_code != 201:
             return ReturnHandling(True, "Error Create" , response.json())
         response_json  = response.json()
@@ -98,7 +98,7 @@ class PosOrder(DBHelper):
         headers = {
             'Authorization': 'Bearer ' + self.controller.access_token
         }
-        response = requests.get('http://localhost:5000/api/v1/pos_order/' + str(pos_order_id), headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_order/' + str(pos_order_id), headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Create" , False)
@@ -136,7 +136,7 @@ class PosOrder(DBHelper):
             "pos_session": 1
         })
 
-        response = requests.post('http://localhost:5000/api/v1/pos_order', headers=headers, data=payload)
+        response = requests.post('http://server001.weha-id.com:5000/api/v1/pos_order', headers=headers, data=payload)
         if response.status_code != 201:
             print(response.status_code)
             return ReturnHandling(True, "Error Create" , False)
@@ -178,7 +178,7 @@ class PosOrder(DBHelper):
             "state": "paid"
         })
 
-        response = requests.put('http://localhost:5000/api/v1/pos_order/' + str(pos_order['id']), headers=headers, data=payload)
+        response = requests.put('http://server001.weha-id.com:5000/api/v1/pos_order/' + str(pos_order['id']), headers=headers, data=payload)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Create" , False)
@@ -190,7 +190,7 @@ class PosOrder(DBHelper):
         headers = {
             'Authorization': 'Bearer ' + self.controller.access_token
         }
-        response = requests.get('http://localhost:5000/api/v1/pos_order/summary/' + str(pos_order_id), headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_order/summary/' + str(pos_order_id), headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Query" , False)   

@@ -30,7 +30,7 @@ class PosSession(DBHelper):
             }
             
             query = "?q=(filters:!((col:company_id,opr:eq,value:" + str(company_id) + "),(col:config_id,opr:eq,value:" + str(config_id) + "),(col:user_id,opr:eq,value:" + str(user_id) + "),(col:state,opr:eq,value:active)))"
-            response = requests.get('http://localhost:5000/api/v1/pos_session/{}'.format(query), headers=headers)
+            response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_session/{}'.format(query), headers=headers)
             if response.status_code != 200:
                 return ReturnHandling(True, "Pos Session not Found" , response.status_code)
             response_json  = response.json()
@@ -43,7 +43,7 @@ class PosSession(DBHelper):
                     'currency_id': 1
                 })
                 print(payload)
-                response = requests.post('http://localhost:5000/api/v1/pos_session', headers=headers, data=payload)
+                response = requests.post('http://server001.weha-id.com:5000/api/v1/pos_session', headers=headers, data=payload)
                 if response.status_code != 201:
                     print("Find Pos Order : Error Create")
                     return ReturnHandling(True, "Error Create" , response.json())
@@ -64,7 +64,7 @@ class PosSession(DBHelper):
         }
         query = "?q=(filters:!((col:company_id,opr:eq,value:" + str(company_id) + "),(col:config_id,opr:eq,value:" + str(config_id) + "),(col:user_id,opr:eq,value:" + str(user_id) + ")))"
         print(query)
-        response = requests.get('http://localhost:5000/api/v1/pos_session/{}'.format(query), headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_session/{}'.format(query), headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Query Data" , False)
@@ -76,7 +76,7 @@ class PosSession(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
 
-        response = requests.post('http://localhost:5000/api/session/' + str(id), headers=headers)
+        response = requests.post('http://server001.weha-id.com:5000/api/session/' + str(id), headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Query Data" , False)
@@ -94,7 +94,7 @@ class PosSession(DBHelper):
             'user_id': user_id,
             'currency_id': currency_id,
         }
-        response = requests.post('http://localhost:5000/api/v1/pos_session', headers=headers, data=values)
+        response = requests.post('http://server001.weha-id.com:5000/api/v1/pos_session', headers=headers, data=values)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Create" , False)
@@ -109,7 +109,7 @@ class PosSession(DBHelper):
             'company_id': company_id,
             'pos_session_id': pos_session_id,
         }
-        response = requests.get('http://localhost:5000/api/v1/pos_session/closed/' + str(pos_session_id), headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_session/closed/' + str(pos_session_id), headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Create" , False)

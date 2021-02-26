@@ -22,7 +22,7 @@ class PosPayment(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
         payload=json.dumps(pos_payment)
-        response = requests.post('http://localhost:5000/api/v1/pos_payment', headers=headers, data=payload)
+        response = requests.post('http://server001.weha-id.com:5000/api/v1/pos_payment', headers=headers, data=payload)
         if response.status_code != 201:
             print(response.status_code)
             return ReturnHandling(True, "Error Query" , False)
@@ -35,7 +35,7 @@ class PosPayment(DBHelper):
         headers = {
             'Authorization': 'Bearer ' + self.controller.access_token
         }
-        response = requests.delete('http://localhost:5000/api/v1/pos_payment/' + str(pos_payment_id), headers=headers)
+        response = requests.delete('http://server001.weha-id.com:5000/api/v1/pos_payment/' + str(pos_payment_id), headers=headers)
         if response.status_code != 200:
             return ReturnHandling(True, "Error Delete", False)
         response_json = response.json()
@@ -47,7 +47,7 @@ class PosPayment(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
         query = "?q=(filters:!((col:pos_order_id,opr:eq,value:" + str(pos_order_id) + ")))"
-        response = requests.get('http://localhost:5000/api/v1/pos_payment/' + query, headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_payment/' + query, headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Query" , False)
@@ -60,7 +60,7 @@ class PosPayment(DBHelper):
         }
         
         query = "?q=(filters:!((col:order_id,opr:eq,value:" + str(pos_order_id) + ")))"
-        response = requests.get('http://localhost:5000/api/v1/pos_payment/' + query, headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_payment/' + query, headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Query" , False)   

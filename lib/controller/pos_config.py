@@ -50,7 +50,7 @@ class PosConfig(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
 
-        response = requests.post('http://localhost:5000/api/category/' + str(id), headers=headers)
+        response = requests.post('http://server001.weha-id.com:5000/api/category/' + str(id), headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Authentication" , False)
@@ -63,7 +63,7 @@ class PosConfig(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
 
-        response = requests.get('http://localhost:5000/api/v1/pos_config/' + str(id), headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/pos_config/' + str(id), headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Authentication" , False)

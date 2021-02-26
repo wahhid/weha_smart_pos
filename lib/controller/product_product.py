@@ -57,7 +57,7 @@ class ProductProduct(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
 
-        response = requests.post('http://localhost:5000/api/smartpos/v1.0/products/1', headers=headers)
+        response = requests.post('http://server001.weha-id.com:5000/api/smartpos/v1.0/products/1', headers=headers)
         print(response.text)
         if response.status_code != '200':
             print("Http 401")
@@ -76,7 +76,7 @@ class ProductProduct(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
         query = "?q=(filters:!((col:barcode,opr:eq,value:" + barcode + ")))"
-        response = requests.get('http://localhost:5000/api/v1/product/{}'.format(query), headers=headers)
+        response = requests.get('http://server001.weha-id.com:5000/api/v1/product/{}'.format(query), headers=headers)
         print(type(response.status_code))
         if response.status_code != 200:
             print("Response not 200")

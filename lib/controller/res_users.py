@@ -43,7 +43,7 @@ class ResUsers(DBHelper):
             'Authorization': 'Bearer ' + self.controller.access_token
         }
 
-        response = requests.post('http://localhost:5000/api/user/name/' + name, headers=headers)
+        response = requests.post('http://server001.weha-id.com:5000/api/user/name/' + name, headers=headers)
         if response.status_code != 200:
             print(response.status_code)
             return ReturnHandling(True, "Error Authentication" , False)
@@ -78,7 +78,7 @@ class ResUsers(DBHelper):
             }
 
             data=json.dumps(payload)
-            response = requests.post('http://localhost:5000/api/v1/security/login', headers=headers, data=data)
+            response = requests.post('http://server001.weha-id.com:5000/api/v1/security/login', headers=headers, data=data)
             if response.status_code != 200:
                 print(response.status_code)
                 return ReturnHandling(True, "Error Authentication" , False)
