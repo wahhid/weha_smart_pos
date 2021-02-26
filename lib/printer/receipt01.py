@@ -1,5 +1,5 @@
-#from escpos.printer import Usb
-from xmlescpos.printer import Usb
+from escpos.printer import Usb
+#from xmlescpos.printer import Usb
 
 # A wrapper to organise item names & prices into columns
 class item:
